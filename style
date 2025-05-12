@@ -1,3 +1,17 @@
+:root {
+  --color-primary: #a888da;
+  --color-accent-bg: #8660c0;
+  --font-family-base: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, "sans-serif", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "sans-serif";
+  --font-size-base: 1rem;
+  --color-shipping-message-bg: #f5f5f5;
+  --color-shipping-message-text: rgba(0, 0, 0, 0.56);
+  --space-sm: 14px;
+  --space-md: 15px;
+  --space-lg: 17px;
+  --radius-sm: 5px;
+}
 img,
 video,
 iframe,
@@ -11,42 +25,44 @@ body.dom-pending * {
   background-image: none !important;
 }
 #shipping-box {
-  margin-top: 15px;
+  margin-top: var(--space-md, 15px);
   display: none;
 }
 #cc-id-tnMTtKcxxLcd {
   text-align: left;
-  color: rgba(0, 0, 0, 0.56);
+  color: var(--color-shipping-message-text, rgba(0, 0, 0, 0.56));
 }
 #enter-shipping-message {
-  padding: 17px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-  border-radius: 5px;
-  background-color: rgb(245, 245, 245);
+  padding: var(--space-lg, 17px);
+  margin-top: var(--space-sm, 14px);
+  margin-bottom: var(--space-sm, 14px);
+  border-radius: var(--radius-sm, 5px);
+  background-color: var(--color-shipping-message-bg, #f5f5f5);
   width: 100%;
 }
 [name="shipProfileId"]:checked {
-  background-color: rgb(242, 247, 255);
-  border: 1px solid rgb(24, 115, 176) !important;
+  background-color: var(--color-accent-bg, #f2f7ff);
+  border: 1px solid var(--color-primary, #1873b0) !important;
 }
 [name="billShipSame"]:checked {
-  background-color: rgb(242, 247, 255);
-  border: 1px solid rgb(24, 115, 176) !important;
+  background-color: var(--color-accent-bg, #f2f7ff);
+  border: 1px solid var(--color-primary, #1873b0) !important;
 }
 .cc-cart-open-text {
-  color: rgb(24, 115, 176);
+  color: var(--color-primary, #1873b0);
 }
 .cc-cart-hidden-text {
-  color: rgb(24, 115, 176);
+  color: var(--color-primary, #1873b0);
 }
 input:not([type="checkbox"]),
 input:not([type="radio"]) {
-  padding: 12px 18px;
-  accent-color: rgb(24, 115, 176);
-  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, "sans-serif", "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "sans-serif";
+  padding: var(--space-md, 12px) var(--space-lg, 18px);
+  accent-color: var(--color-primary, #1873b0);
+  font-family: var(
+    --font-family-base,
+    'apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "sans-serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "sans-serif"'
+  );
+  font-size: var(--font-size-base, 1rem);
 }
 .sticky {
   top: 0px;
